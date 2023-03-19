@@ -99,3 +99,21 @@ fi
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
+
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+else
+    print "404: ~/.aliases not found."
+fi
+
+if [ -f ~/.exports ]; then
+    source ~/.exports
+else
+    print "404: ~/.exports not found."
+fi
+
+if [ -f ~/.functions ]; then
+    source ~/.functions
+else
+    print "404: ~/.functions not found."
+fi
